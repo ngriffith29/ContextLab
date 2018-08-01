@@ -14,35 +14,32 @@ var weapons = ["Ar-15", "Russian Hackers", "Garrote Wire", "Pen Dagger", "Lapel 
 //Function below creates 100 h3s
     function create100(num) {       
         for(var i = 0; i<num; i++){
-           createH3([i])
+           
+                var h3 = $('<h3></h3>').text(`Accusation ${i +1}`)
+                    $("body").append(h3)
+
+          h3.on("click", function (){
+   
+            alert(`I accuse ${friendName[i%5]} with the
+            ${weapons[Math.floor(Math.random() * 20)]} in the ${locations[Math.floor(Math.random() * 10)]}!`)
+         
+         
+         })
+
            
         }        
     }   
 
     //function below creates 100 h3s and counts them up by ++
-    function createH3 (){
-        var h3 = $('<h3></h3>').text(`Accusation ${count += 1}`)
-            $("body").append(h3)
-    }
-    //Function Creates the indexes for the 3 arrays
-   function indexes (){ for(let i = 0; i<num2; i++){
+   
 
-
-
-    }
-   }
+   
 //Below are all my function calls
 create100(100)
 
 //Event listner
 
-$('h3').on("click", function (){
-   
-   alert(`I accuse ${friendName[Math.floor(Math.random() * 5)]} with the
-   ${weapons[Math.floor(Math.random() * 20)]} in the ${locations[Math.floor(Math.random() * 10)]}!`)
 
-
-})
 
 
 })
